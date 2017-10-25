@@ -86,38 +86,38 @@
             var isFinishedFirstNumber = false
 
             $('.operator').on('click', function(){
-               operator = $('.operator').val()
-               isFinishedFirstNumber = true
+             operator = $('.operator').val()
+             isFinishedFirstNumber = true
 
-               if (operator === "times"){
-                  operator = "*";
-              } else if ( operator === "plus"){
-                  operator = "+";
-              } else if (operator === "minus"){
-                  operator = "-";
-              } else if (operator === "divide"){
-                  operator = "/";
-              } else if (operator === "power"){
-                  operator = "^";
-              }
+             if (operator === "times"){
+              operator = "*";
+          } else if ( operator === "plus"){
+              operator = "+";
+          } else if (operator === "minus"){
+              operator = "-";
+          } else if (operator === "divide"){
+              operator = "/";
+          } else if (operator === "power"){
+              operator = "^";
+          }
 
-          })
+      })
 
             $('.number').click(function() {
                 if (isFinishedFirstNumber === false){
                     firstNumber += $(this).val()
                     console.log(firstNumber)
+                    $('#first-number').text(firstNumber)
                 } else {
                     secondNumber += $(this).val()
                     console.log(secondNumber)
-                }
-                
-            })
+                    $('#second-number').text(secondNumber)                }
+
+                })
 
         })
-        </script>
+    </script>
 
-    </body>
-    </html>
+</body>
+</html>
 
-    
