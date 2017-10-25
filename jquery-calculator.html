@@ -85,7 +85,7 @@
             var operator = ""
             var isFinishedFirstNumber = false
 
-            $('operator').on('click', function(){
+            $('.operator').on('click', function(){
                operator = $('.operator').val()
                isFinishedFirstNumber = true
 
@@ -103,21 +103,21 @@
 
           })
 
-           
-
-
             $('.number').click(function() {
                 if (isFinishedFirstNumber === false){
                     firstNumber += $(this).val()
                     console.log(firstNumber)
                 } else {
                     secondNumber += $(this).val()
+                    console.log(secondNumber)
                 }
                 
             })
 
-        }
+        })
         </script>
 
     </body>
     </html>
+
+    
