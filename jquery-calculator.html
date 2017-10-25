@@ -103,23 +103,23 @@
 
               $('#operator').text(operator);
 
-          })
-
-           
-
+          });
 
             $('.number').click(function() {
                 if (isFinishedFirstNumber === false){
                     firstNumber += $(this).val()
                     console.log(firstNumber)
+                    $('#first-number').text(firstNumber)
                 } else {
                     secondNumber += $(this).val()
-                }
-                
-            })
+                    console.log(secondNumber)
+                    $('#second-number').text(secondNumber)                }
 
-        }
-        </script>
+                })
 
-    </body>
-    </html>
+        })
+    </script>
+
+</body>
+</html>
+
