@@ -87,6 +87,23 @@ var operator = ""
 
 
 });
+$('operator').on('click', function(){
+	operator = $('.operator').val()
+
+	if (operator === "times"){
+		operator = "*";
+	} else if ( operator === "plus"){
+		operator = "+";
+	} else if (operator === "minus"){
+		operator = "-";
+	} else if (operator === "divide"){
+		operator = "/";
+	} else if (operator === "power"){
+		operator = "^";
+	}
+
+})
+
 
 </script>
 
