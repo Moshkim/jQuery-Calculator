@@ -84,21 +84,7 @@
       var operator = ""
       var isFinishedFirstNumber = false
 
-      $('operator').on('click', function(){
-        operator = $('.operator').val()
 
-        if (operator === "times"){
-          operator = "*";
-        } else if ( operator === "plus"){
-          operator = "+";
-        } else if (operator === "minus"){
-          operator = "-";
-        } else if (operator === "divide"){
-          operator = "/";
-        } else if (operator === "power"){
-          operator = "^";
-        }
-      })
 
       $('.number').click(function() {
         if (isFinishedFirstNumber === false){
@@ -119,6 +105,7 @@
         firstNumber = parseInt(firstNumber)
         secondNumber = parseInt(secondNumber)
 
+
         if (operator === "*"){
           equal = firstNumber * secondNumber 
         } else if (operator === "+"){
@@ -135,11 +122,31 @@
 
       })
     })
+    $('operator').on('click', function(){
+     operator = $('.operator').val()
+     isFinishedFirstNumber = true
 
-    </script>
+     if (operator === "times"){
+      operator = "*";
+    } else if ( operator === "plus"){
+      operator = "+";
+    } else if (operator === "minus"){
+      operator = "-";
+    } else if (operator === "divide"){
+      operator = "/";
+    } else if (operator === "power"){
+      operator = "^";
+    }
+
+    $('#operator').text(operator);
+
+  });
+    >>>>>>> 6788f51e2198c77efd317f374ab811fc8c9b97cd
+
+  </script>
 
 
 
-  </body>
-  </html>
+</body>
+</html>
 
