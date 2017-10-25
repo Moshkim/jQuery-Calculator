@@ -100,6 +100,26 @@ $('operator').on('click', function(){
 		operator = "^";
 	}
 
+$('.equal').on('click', function(){
+  firstNumber = parseInt(firstNumber)
+  secondNumber = parseInt(secondNumber)
+
+  if (operator === "*"){
+    equal = firstNumber * secondNumber 
+  } else if (operator === "+"){
+    equal = firstNumber + secondNumber
+  } else if (operator === "-"){
+    equal = firstNumber - secondNumber
+  } else if (operator === "/"){
+    equal = firstNumber / secondNumber
+  } else if (operator === "^"){
+    equal = Math.pow(firstNumber, secondNumber)
+  }
+
+  $('#result').text(equal)
+
+});
+
 });
 
 
